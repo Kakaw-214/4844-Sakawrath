@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    input {
+        border-radius: 5px;
+    }
+    button {
+        border-radius: 5px;
+        background-color: chartreuse;
+    }
+    </style>
+</head>
+<body>
+    Radius: <br>
+
+    <div class="getinput">
+    <input type="text" name="" id="radius" value="10">
+    <button onclick="showResult()">Click!</button>
+    </div>
+    <div class="output">
+        <p id = "show1"></p>
+        <input type="text" name="" id="show2">
+    </div>
+    <script>
+        function showResult(){
+            let rad = document.getElementById("radius").value;
+            document.getElementById("show1").innerHTML =
+            "The circle area is " + (Math.PI * rad**(2).toFixed(2));
+            // สองบรรทัดบนจะแสดงผลลัพธ์แบบไม่มีกรอบ
+
+            document.getElementById("show2").value =
+            (Math.PI * rad ** 2).toFixed(2);
+            // แสดงผลลัพธ์แบบมีกรอบ 
+        }
+    </script>
+</body>
+</html>

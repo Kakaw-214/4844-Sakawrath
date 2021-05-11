@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Document
+        </title>
+        <style>
+            .h11 {
+                text-align: center;
+                font-size: 24px;
+                width: auto ;
+                height: auto ;
+                /* บ้าน : กำนดขนาดกว้างหรือยาวของกล่องข้อความได้
+                ถ้าไม่อยากปรับก็ใส่ auto */
+                padding: 20px;
+                /* สนามหญ้า : พื้นที่รอบข้อความ
+                เรียงแบบ บน ขวา ล่าง ซ้าย */
+                border: 10px solid wheat;
+                border-left: 30px solid burlywood;
+                border-top: 3px solid wheat;
+                border-bottom: 3px solid wheat;
+                border-right: 40px double orange;
+                border-radius: 10px ; 
+                /* กรอบข้อความ กำหนดขนาดและสีไม่เหมือนกัน
+                จะต้องแยกกัน ไม่เอาขอบใช้ 0px
+                เส้นปกติ solid
+                เส้นคู่ double
+                เส้นจุด dotted
+                ขอบมนใช้ border radius ใส่เป็นเปอร์เซ็นหรือ px ก็ได้
+                ถ้ามุมไม่เท่ากันจะเรียงวนขวา*/
+                margin: 50px 100px 50px 75px ;
+                /* ระยะห่าง เรียงจาก บน ขวา ล่าง ซ้าย
+                ถ้ามี 1 ตัว จะเท่ากันหมด
+                ถ้ามี 2 ตัว จะเป็นซ้ายกับขวา
+                ถ้ามี 3 ตัว จะเป็น บน ซ้ายขวา ล่าง*/
+                box-shadow: 10px -5px 10px  lightcyan;
+            }
+            .div1 {
+                text-align: center;
+            }
+            .img1 {
+                
+                width: 400px;
+                height: 400px;
+                border: 9px double lightseagreen;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1">
+        <h1 class="h11">
+            The 7 wastes of Lean Manufacturing
+        </h1>
+        <br>
+        <img class="img1" src="https://do.lnwfile.com/_/do/_raw/10/jy/0g.png" >
+        </div>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Document
+        </title>
+        <style>
+            h1{
+                color: lightseagreen;
+                text-align: left
+                
+            }
+            #id1{
+                color: lightcoral;
+                text-align: center;
+                /* ถ้าพร้อมกันจะเลือกให้ id รันก่อน class เสมอ */
+            }
+            #id2{
+                background-color: lightslategray;
+                font-size: 30px;
+            }
+            .cls{
+                color: cornsilk;
+                text-align: center;
+            }
+            .cls2{
+                background-color: rgb(3, 2, 0);
+                font-size: 30px;
+            }
+            *{
+                color:darkorchid;
+                background-color: lightyellow;
+                /* จะเป็นภาพรวมทั้งหมด รวมถึงตัวที่ไม่ได้ใส่คำสั่งอะไรไว้
+                รวบหมดเลย */
+               }
+            h3,
+            h4,
+            h5 {
+                color:lightgreen;
+                text-align: center;
+                /* เป็น grouping */
+                }
+            p.cls3{
+                background-color:wheat;
+                font-size: 25px;
+                /* จะใช้ได้แค่ตัวที่กำหนด
+                เช่น p. ก็จะใช้ได้แค่พารากราฟ ใข้กับ h1ไม่ได้ */
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="id1 id2">Hello CSS Tag</h1>
+        <h1 id="id1">Hello CSS Tag</h1>
+        <!-- ถ้า id2ตัว จะไม่รันเลย ให้เลือกได้อันเดียว -->
+        <h1 class="cls cls2">Hello CSS id</h1>
+        <!-- รันได้หมด -->
+        <h2>Hello CSS 666</h2>
+        <h3>Hello CSS 777</h3>
+        <h4>Hello CSS 777</h4>
+        <h5>Hello CSS 777</h5>
+
+        <h1 class="cls3">Hello World</h1>
+        <p class="cls3">Hello World</p>
+    </body>
+</html>

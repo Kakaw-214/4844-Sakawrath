@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APE122 Cutting & Machine Tool</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        .calculator1 {
+            background-color: cyan;
+            width: 300px;
+            height: 280px;
+            border: 4px solid black;
+            border-radius: 20px;
+            padding: 15px;
+            margin: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+           }
+           .calculator2 {
+            background-color: lime;
+            width: 300px;
+            height: 340px;
+            border: 4px solid black;
+            border-radius: 20px;
+            padding: 15px;
+            margin: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+           }
+        .calculator1 h3 {
+               text-align: center;
+               background-color: lightyellow;
+               padding: 5px;
+           }
+        .calculator2 h3 {
+               text-align: center;
+               background-color: lightcyan;
+               padding: 5px;
+           }
+        .calculator1 input {
+               background-color: white ;
+               width: 150px;
+               border: 2px solid black;
+               padding: 5px;
+               margin-left: 20px;
+               margin-bottom: 10px;
+               margin-top: 3px;
+           }
+        .calculator2 input {
+               background-color: white ;
+               width: 150px;
+               border: 2px solid black;
+               padding: 5px;
+               margin-left: 20px;
+               margin-bottom: 10px;
+               margin-top: 3px;
+           }
+        .botton {
+               background-color: lightgoldenrodyellow;
+               padding: 5px;
+               margin-left: 20px;
+               font-size: 16px;
+           }
+        .botton2 {
+               background-color: lightcyan;
+               padding: 5px;
+               margin-left: 20px;
+               font-size: 16px;
+           }
+    </style>
+    <script>
+        function speedrate() {
+            let D = parseFloat(document.getElementById("diameter").value);
+            let n = parseFloat(document.getElementById("ความเร็วรอบ").value);
+            let Vc = (3.14159265 * D * n) / 1000;
+            document.getElementById("speedrate").value = Vc.toFixed(3);
+        }
+    </script>
+    <script>
+        function feedrate() {
+            let fz = parseFloat(document.getElementById("Fpertooth").value);
+            let z = parseFloat(document.getElementById("Numberoftooth").value);
+            let n2 = parseFloat(document.getElementById("ความเร็วรอบ2").value);
+            let Vf = (fz * z *n2);
+            document.getElementById("feedrate").value = Vf.toFixed(3);
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1><u>Speed Rate</u></h1>
+        <img src="http://www.difference.minaprem.com/wp-content/uploads/2019/06/Cutting-velocity-and-cutting-speed-in-straight-turning.jpg" width="602" height="260">
+        <h1><u>Feed Rate</u></h1>
+        <img src="https://www.allied-material.co.jp/dcms_media/image/en_cutting_formula_img10.jpg">
+    </center>
+    <div class="container">
+    <div class="calculator1">
+        <h3>Speed Rate</h3>
+        <label for="" style="margin-left: 20px;">Spindle Speed (n)</label><br>
+        <input type="text" name="" id="ความเร็วรอบ" size="10px"> (rev/min)
+        <br>
+        <label for="" style="margin-left: 20px;">Cutter Diameter (D)</label><br>
+        <input type="text" name="" id="diameter" size="10px"> (mm)
+        <br>
+        <label for="" style="margin-left: 20px;">Speed Rate (Vc)</label><br>
+        <input type="text" name="" id="speedrate" size="10px"> (m/min)
+        <br>
+        <button class="botton" onclick="speedrate()">Enter</button>
+    </div>
+    <div class="calculator2">
+        <h3>Feed Rate</h3>
+        <label for="" style="margin-left: 20px;">Feed per Tooth (fz)</label><br>
+        <input type="text" name="" id="Fpertooth" size="10px"> (mm/tooth)
+        <br>
+        <label for="" style="margin-left: 20px;">Number of Teeth (z)</label><br>
+        <input type="text" name="" id="Numberoftooth" size="10px">
+        <br>
+        <label for="" style="margin-left: 20px;">Spindle Speed (n)</label><br>
+        <input type="text" name="" id="ความเร็วรอบ2" size="10px"> (rev/min)
+        <br>
+        <label for="" style="margin-left: 20px;">Feed Rate (Vf)</label><br>
+        <input type="text" name="" id="feedrate" size="10px"> (mm/min)
+        <br>
+        <button class="botton2" onclick="feedrate()">Enter</button>
+    </div>
+    </div>
+</body>
+</html>

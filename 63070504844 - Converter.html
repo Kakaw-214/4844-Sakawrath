@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+
+    <script>
+        // function basicCalculation() {
+        // var Number1 = parseInt(document.getElementById("Number1").value);
+        // var Number2 = parseInt(document.getElementById("Number2").value);
+        // document.getElementById("Result").value = Number1 + Number2;
+        // ไม่มีเลขทศนิยม
+        // }
+        function basicCalculation() {
+            var Number1 = parseFloat(document.getElementById("Number1").value);
+            var Number2 = parseFloat(document.getElementById("Number2").value);
+            var res;
+            var operation = document.getElementById("operator").value
+
+            if (operation === "+") {
+                res = Number1 + Number2;
+            }
+            if (operation === "-") {
+                res = Number1 - Number2;
+            }
+            if (operation === "*") {
+                res = Number1 * Number2;
+            }
+            if (operation === "/") {
+                res = Number1 / Number2;
+            }
+            document.getElementById("Result").value = res.toFixed(2);
+            // มีเลขทศนิยม กำหนดจำนวนทศนิยมได้ในวงเล็บ
+        }
+    </script>
+
+    <style>
+        .calculator {
+            width: 250px;
+            height: 200px;
+            border: 5px solid black;
+            border-radius: 20px;
+            background-color: seashell;
+            padding: 15px;
+            margin: 20px;
+
+        }
+
+        .calculator h3 {
+            text-align: center;
+            background-color: brown;
+            padding: 5px;
+            color: seashell;
+
+        }
+
+        .calculator input {
+            background-color: wheat;
+            margin : 3px 0px;
+            margin-bottom: 3px;
+        }
+
+        .calculator button {
+            background-color: palegreen;
+        }
+
+        .calculator select {
+            background-color: papayawhip;
+        }
+
+        /* Temperature Conversion  */
+        .TemperConversion {
+            width: 250px;
+            height: 160px;
+            border: 5px solid black;
+            border-radius: 20px;
+            background-color: brown;
+            padding: 15px;
+            margin: 20px;
+        }
+        .TemperConversion h3 {
+            text-align: center;
+            background-color: seashell;
+            padding: 5px;
+            color: brown;
+        }
+
+        .TemperConversion input {
+            background-color: wheat;
+            margin : 3px 0px;
+            margin-bottom: 3px;
+        }
+        .TemperConversion button {
+            background-color: palegreen;
+        }
+        .TemperConversion select {
+            background-color: papayawhip;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+    </style>
+
+    <script>
+        function c2f() {
+            let c = parseFloat(document.getElementById("cel").value);
+            let f = c * (9 / 5) + 32;
+            document.getElementById("fah").value = f.toFixed(2);
+        }
+        function f2c() {
+            let f = parseFloat(document.getElementById("fah").value);
+            let c = (f - 32) * 5 / 9;
+            document.getElementById("cel").value = c.toFixed(2);
+        }
+    </script>
+
+
+</head>
+
+<body>
+    
+        <!-- Basic Calculator -->
+    
+    <div class="calculator">
+
+
+        <h3>Basic Calculator</h3>
+        <label for="">Number1</label><br>
+        <input type="text" name="" id="Number1">
+        <select name="" id="operator" style="border: 2px solid slategrey;">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+        </select>
+        <br>
+        <label for="">Number2</label><br>
+        <input type="text" name="" id="Number2">
+        <br>
+        <label for="">Result</label><br>
+        <input type="text" name="" id="Result" size="10px">
+        <button onclick="basicCalculation()">Enter</button>
+    </div>
+
+    <!-- Temperature Conversion -->
+    <div class="TemperConversion">
+
+        <h3>Temperature Conversion</h3>
+        <label for="" style="color: snow;">Celcius[°C]</label><br>
+        <input type="text" name="" id="cel" size="10px">
+        <button onclick="c2f()">c2f</button>
+        <br>
+        <label for="" style="color: snow;">Fahrenheit[°F]</label><br>
+        <input type="text" name="" id="fah" size="10px">
+        <button onclick="f2c()">f2c</button>
+    </div>
+</div>
+</body>
+</html>

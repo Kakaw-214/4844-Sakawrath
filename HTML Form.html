@@ -1,0 +1,114 @@
+<!Doctype html>
+<html>
+<head>
+    <title>HTML Form</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Register</h1>
+    <form action="">
+        <p>
+            <label for="username">Username : </label>
+            <br>  
+            <input type="text" name="username" placeholder="Enter username">
+            <!-- text จะเห็นตัวอักษร -->
+            <!-- placeholder  ขึ้นตัวอักษรจางๆที่ฟิลด์ -->
+        </p>
+        <p>   
+            <label for="P">Password : </label>
+            <br>
+            <input type="password" name="P" required>
+            <!-- password จะไม่เห็นตัวอักษร -->
+            <!-- required บังคับใส่ -->
+        </p>
+        <p>
+            <label for="email">Email : </label>
+            <br>
+            <input type="email" name="email">
+            <!-- password จะไม่เห็นตัวอักษร -->
+        </p>
+        <p>
+            <label for="text">Address : </label>
+            <br>
+            <textarea name="adress" col="20" row="5"></textarea>
+            <!-- textarea จะให้พื้นที่เยอะ -->
+        </p>
+        <p>
+            <label type="age">Age : </label>
+            <br>
+            <input type="number" name="age" min"0">
+            <!-- number จะมีscrollเลื่อนได้ -->
+        </p>
+        <p>
+            <label for="birthday">Birthday : </label>
+            <br>
+            <input type="date" name="birthday">
+            <!-- date จะขึ้นปฏิทิน -->
+        </p>
+        <p>
+            <label for="gender">Gender : </label>
+            <br>
+            <input type="radio" name="Gender" value="male">
+            <label for="male">Male</label>
+            <br>
+            <input type="radio" name="Gender" value="female">
+            <label for="female">female</labe>
+            <br>
+            <input type="radio" name="Gender" value="others">
+            <label for="others">Others</label>
+            <!-- radio คือให้จิ้มเลือก1อัน  -->
+        </p>
+        <p>
+            <label for="education">Education : </label>
+            <br>
+            <select name="edu">
+                <option value="High School">High School</option>
+                <option value="Bechelor">Bechelor</option>
+                <option value="Master">Master</option>
+                <option value="Doctor">Doctor</option>
+            <!-- select จะให้ไถเลือกตัวเลือก -->
+            </select>
+        </p>
+        <p>
+            <label for="transport">Transport : </label>
+            <input type="checkbox" name="transport">Walk
+            <input type="checkbox" name="transport">Bus
+            <input type="checkbox" name="transport">Car
+            <input type="checkbox" name="transport">Boat
+            <input type="checkbox" name="transport">Train
+            <!-- checkbox เลือกได้หลายตัวเลือก  -->
+        </p>
+        <p>
+            <label for="addfile">Add a file : </label>
+            <input type="file" name="addfile">
+            <!-- file ให้เลือกไฟล์ -->
+        </p>
+        <p>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+            <!-- Reset กับ Submit -->
+        </p>
+    </form>
+    <hr>
+    <h1>Search</h1>
+    <meta charset="UTF-8">
+    <label for="search">Youtube </label>
+    <form action="http://www.youtube.com/results">
+    <input type="text" name="search_query">
+    <input type="submit" value="Search">
+    <!-- Go to Web youtube อสยากแท้หยั่งถึง -->
+
+    <br><br>
+
+    <meta charset="UTF-8">
+    <label for="search">Google </label>
+    <br>
+    <meta charset="UTF-8">
+    <form action="http://www.google.com/search">
+    <input type="text" name="q" id="">
+    <button>Search</button>
+    <!-- Go to Web google อสยากแท้หยั่งถึง2 -->
+    <!-- **เขียนเสิร์ชได้แค่เว็บเดียวเท่านั้น!!** -->
+</form>
+</body>
+</html>

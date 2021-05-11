@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <center><img src="00.png" alt="" id="img" width="450" height="450"></center>
+    <script>
+        document.getElementById("img").addEventListener("mouseover", function() {
+            this.style = "box-shadow: 10px 10px 10px chartreuse";
+            this.width = "550";
+            this.height = "550";
+        })
+        document.getElementById("img").addEventListener("mouseout", function() {
+            this.style = "";
+            this.width = "450";
+            this.height = "450";
+        })
+    </script>
+</body>
+</html>

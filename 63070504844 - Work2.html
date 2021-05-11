@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Tag HTML พื้นฐาน
+    </title>
+    <style>
+        table,
+        th,
+        td
+        {
+            padding: 12px;
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="background-color:#75cfb8;">
+    <div align="center">
+    <table width="90%">
+        <caption><h1 style="color: white;">Tag HTML พื้นฐาน</h1></caption>
+        <thead>
+        <tr bgcolor="#bbdfc8" style="color:black;">
+            <th rowspan="2">#</th>
+            <th rowspan="2">Tag</th>
+            <th rowspan="3">ความหมาย</th>
+            <th rowspan="2">รูปแบบการใช้งาน</th>
+        </tr>
+        </thead>
+        <tr bgcolor="#ffc478"> <td>1</td>
+            <td> html </td>
+            <td>เป็นแท็กเริ่มต้นและสิ้นสุดของเอกสาร</td>
+            <td> < html > ... < /html > </td>
+            </tr>
+        <tr bgcolor="#f0e5d8"> <td>2</td>
+            <td> head </td>
+            <td>เป็นแท็กที่ใช้กำหนดในส่วนที่เป็นชื่อเรื่อง</td>
+            <td> < head > ... < /head > </td>
+            </tr>
+        <tr bgcolor="#ffc478"> <td>3</td>
+            <td> title </td>
+            <td>กำหนดข้อความบนไตเติลบาร์</td>
+            <td> < title > ... < /title > </td>
+            </tr>
+        <tr bgcolor="#f0e5d8"> <td>4</td>
+            <td> body </td>
+            <td>เป็นแท็กเริ่มต้นและสิ้นสุดของเนื้อหาที่แสดงบนหน้าเว็บไซต์</td>
+            <td> < body > ... < /body> </td>
+            </tr>
+        <tr bgcolor="#ffc478"> <td>5</td>
+            <td>h1 - h5</td>
+            <td>ขนาดแตกต่างกันและเว้นบรรทัด</td>
+            <td> < h1 > ... < /h1 > </td>
+            </tr>
+        <tr bgcolor="#f0e5d8"> <td>6</td>
+            <td> br </td>
+            <td> ขึ้นบรรทัดใหม่ </td>
+            <td> < br > </td>
+            </tr>
+        <tr bgcolor="#ffc478"> <td>7</td>
+            <td> hr </td>
+            <td>ขีดเส้นระหว่างบรรทัด</td>
+            <td> < hr > </td>
+            </tr>
+        <tr bgcolor="#f0e5d8"> <td>8</td>
+            <td> p </td>
+            <td>ขึ้นย่อหน้าใหม่</td>
+            <td> < p > ... < /p > </td>
+            </tr>
+        <tr bgcolor="#ffc478"> <td>9</td>
+            <td> b หรือ strong </td>
+            <td>ตัวอักษรหนา</td>
+            <td> < b > ... < /b > <br>หรือ <br>< strong > ... < /strong > </td>
+            </tr>
+        <tr bgcolor="#f0e5d8"> <td>10</td>
+            <td>i หรือ em</td>
+            <td>ตัวอักษรเอียง</td>
+            <td> < i > ... < /i > <br>หรือ <br>< em > ... < /em > </td>
+            </tr>
+        <tr bgcolor="#ffc478"> <td>11</td>
+            <td> ul </td>
+            <td>แสดงรายการเป็นลำดับโดยใช้วงกลมทึบ ถ้าเป็นลำดับที่อยู่ในลำดับอีกทีจะแสดงเป็นวงกลมโปร่ง</td>
+            <td> < ul > ... < /ul > </td>
+            </tr>
+        <tr bgcolor="#f0e5d8"> <td>12</td>
+            <td> ol </td>
+            <td>เป็นแท็กสำหรับแสดงรายการเป็นลำดับโดยใช้ตัวเลข</td>
+            <td> < ol > ... < /ol > </td>
+            </tr>
+        <tr bgcolor="#ffc478"> <td>13</td>
+            <td> li </td>
+            <td>เป็นแท็กสำหรับแสดงข้อความใน < ul >และ < ol ></td>
+            <td> < li > ... < /li > </td>
+            </tr>
+        <tr bgcolor="#f0e5d8"> <td>14</td>
+            <td>start = (ตัวเลขที่ต้องการเริ่ม)</td>
+            <td>เป็นแท็กสำหรับแสดงรายการเป็นลำดับโดยเริ่มต้นจาก 5 ใช้ร่วมกับแท็ก < ol ></td>
+            <td> < ol start= 5 > ... < /ol > </td>
+            </tr>
+        <tr bgcolor="#ffc478"> <td>15</td>
+            <td> img src="(ชื่อภาพ).นามสกุลไฟล์" </td>
+            <td>แสดงรูปภาพโดยเป็นชื่อไฟล์ที่ถูกเซฟ กำหนดความกว้าง ความสูง ตามลำดับ
+                <br>โดยรูปที่นำมาใช้ควรอยู่ในโฟลเดอร์เดียวกันเพื่อให้ง่ายต่อการแสดงรูปภาพ </td>
+            <td> < img src="ชื่อไฟล์.นามสกุล" width="ความกว้าง" height="ความสูง" ></td>
+            </tr>
+        <tr bgcolor="#f0e5d8"> <td>16</td>
+            <td> < !--...-- > </td>
+            <td>กำหนดเป็นความคิดเห็น โดยจะไม่ปรากฎบนหน้าเว็บไซต์</td>
+            <td> Shift + / บนแป้นพิมพ์ </td>
+            </tr>
+        <tr bgcolor="#ffc478"> <td>17</td>
+            <td> a </td>
+            <td>เชื่อมโยงไปยังเว็บไซต์ต่างๆ</td>
+            <td> < a href="http://www.(ชื่อเว็บไซต์).com" > ... < /a > </td>
+            </tr>
+        <tr bgcolor="#f0e5d8"> <td>18</td>
+            <td> table </td>
+            <td> สร้างตาราง </td>
+            <td> < table >...< /table > </td>
+            </tr>
+        <tr bgcolor="#ffc478"> <td>19</td>
+            <td> tr </td>
+            <td>กำหนดแถวในตาราง</td>
+            <td> < tr > ... < /tr > </td>
+            </tr>
+        <tr bgcolor="#f0e5d8"> <td>20</td>
+            <td> td </td>
+            <td>กำหนดข้อมูลในแถว</td>
+            <td> < td > ... < /td > </td>
+            </tr>
+        <tr bgcolor="#ffc478"> <td>21</td>
+            <td> style="..." </td>
+            <td>ใช้สำหรับตกแต่ง เช่น รูปแบบฟ้อนต์ ขนาดฟ้อนต์ สีพื้นหลัง สีตัวอักษร เป็นต้น
+                <br>โดยใช้ร่วมกับแท็กต่างๆ</td>
+            <td> < body style="color: (ชื่อหรือโค้ดสี) > ... < /body > </td>
+            </tr>
+        <tr bgcolor="#f0e5d8"> <td>22</td>
+            <td> small </td>
+            <td> ข้อความตัวเล็กลง </td>
+            <td> < small > ... < /small > </td>
+            </tr>
+        <tr bgcolor="#ffc478"> <td>23</td>
+            <td> mark </td>
+            <td>เน้นข้อความที่ต้องการ</td>
+            <td> < mark > ... < /mark > </td>
+            </tr>
+        <tr bgcolor="#f0e5d8"> <td>24</td>
+            <td> sub </td>
+            <td>ข้อความแบบตัวพ่วงท้าย</td>
+            <td> < sub > ... < /sub > </td>
+            </tr>
+        <tr bgcolor="#ffc478"> <td>25</td>
+            <td>  sup </td>
+            <td>ข้อความแบบตัวยกระดับ</td>
+            <td> < sup > ... < /sup > </td>
+            </tr>
+        <tr bgcolor="#f0e5d8"> <td>26</td>
+            <td> form </td>
+            <td>สำหรับกำหนดการสร้าง form </td>
+            <td> < form >...< /form > </td>
+            </tr>
+    </table>
+    <h3 style="color: darkslategrey;">
+    <br>นางสาวสกาวรัช สอาดวงศ์ APE 63070504844 <br><br>
+    </h3>
+    </div>
+</body>
+</html>

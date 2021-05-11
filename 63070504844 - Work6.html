@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Area</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        .Area {
+            height: 250px;
+            width: 300px;
+            border: 4px solid black;
+            border-radius: 20px;
+            background-color: yellow;
+            margin: 20px;
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .Area h3 {
+               text-align: center;
+               background-color: salmon;
+               padding: 5px;
+           }
+        .Area input {
+               background-color: white ;
+               width: 150px;
+               border: 2px solid black;
+               padding: 5px;
+               margin-left: 5px;
+               margin-bottom: 10px;
+               margin-top: 5px;
+        }
+        .botton {
+               background-color: seashell;
+               padding: 5px;
+               margin-left: 5px;
+               font-size: 14px;
+           }
+    </style>
+</head>
+<body style="background-color: lightcyan;">
+    <br><br>
+    <div class="container">
+    <!-- Triangle -->
+    <div class="Area">
+        <h3>Triangle Area</h3>
+        <label for="" style="margin-left: 5px;">Base (cm)</label><br>
+        <input type="text" name="" id="base" value="" style="margin-right: 3px;">
+        <br>
+        <label for="" style="margin-left: 5px;">Height (cm)</label><br>
+        <input type="text" name="" id="height" value="" style="margin-right: 3px;">
+        <br>
+        <p id="result"></p>
+        <script>
+            let b = document.getElementById("base");
+            let h = document.getElementById("height");
+            let area = document.getElementById("result");
+            b.addEventListener("input", triArea);
+            h.addEventListener("input", triArea);
+            function triArea() {
+                let base = parseFloat(b.value);
+                let height = parseFloat(h.value);
+                area.innerHTML = `The triangle area is ${(0.5 * base * height).toFixed(2)}`
+            }
+        </script>
+    </div>
+    <!-- Rectangle -->
+    <div class="Area">
+        <h3>Rectangle Area</h3>
+        <label for="" style="margin-left: 5px;">Width (cm)</label><br>
+        <input type="text" name="" id="w1" size="10px"> 
+        <br>
+        <label for="" style="margin-left: 5px;">Length (cm)</label><br>
+        <input type="text" name="" id="l1" size="10px"> 
+        <br>
+        <label for="" style="margin-left: 5px;">this rectangle area (cm<sup>2</sup>)</label><br>
+        <input type="text" name="" id="area1" size="10px"> 
+        <button class="botton" onclick="recarea()">Enter</button>
+        <script>
+            function recarea() {
+                let w11 = parseFloat(document.getElementById("w1").value);
+                let l11 = parseFloat(document.getElementById("l1").value);
+                let area1 = (w11 * l11);
+                document.getElementById("area1").value = area1.toFixed(2);
+            }
+        </script>
+    </div>
+    <!-- Circle -->
+    <div class="Area">
+        <h3>Circular Area</h3>
+        <label for="" style="margin-left: 5px;"></label>Radius: <br>
+        <div class="getinput">
+        <input type="text" name="" id="radius" value="">
+        <button class="botton" onclick="circle()">Enter</button>
+        </div>
+        <div class="output">
+            <p id = "show1" style="margin-left: 5px;"></p>
+        </div>
+        <script>
+            function circle(){
+                let rad = document.getElementById("radius").value;
+                document.getElementById("show1").innerHTML =
+                "The circle area is " + (Math.PI * rad**(2).toFixed(2));
+            }
+        </script>
+    </div>
+    </div>
+</body>
+</html>

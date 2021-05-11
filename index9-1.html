@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิธีใช้ฟังก์ชั่น</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+
+        // call function แบบมีพารามิเตอร์
+        function getVolume(l,w,h) {
+            alert (l * w * h)
+            // ถ้าเปลี่ยน return เป็น alert จะขึ้นผลเลย
+        }
+        getVolume(5,5,5); 
+        // alert มีไว้เรียกฟังก์ชั่น จะใส่ก่อนหรือหลังเขียนฟังก์ชั่นก็ได้
+        // ถ้ามี alert ข้างบนแล้ว ก็ไม่ต้องใส่ alert ตรงนี้ ใส่ getvolume ได้เลย
+
+         // call function แบบไม่มีพารามิเตอร์ ต้องกำหนดค่าด้วย
+        let x = 5;
+            y = 6;
+            z = 7;
+            // กำหนดค่าก่อนใส่ฟังก์ชั่น จะได้รันได้
+        alert(calVolume());
+        function calVolume() {
+        // ไม่มีพารามิเตอร์ก็ไม่ต้องใส่ค่าในวงเล็บ
+            return x*y*z
+        }
+        
+// อันไหนขึ้นก่อนก็คำนวณของอันนั้นก่อน
+       
+        let getvolume = function (w, l, h) {
+            alert(w * l * h)
+        }
+        getVolume(2,3,4); //call funtion
+
+        const calVolume = functiom() {
+            alert(x * y * z);
+        }
+        calVolume();
+
+        // function expression
+        let getCircleArea = function(r) {
+            return Math.PI * r ** 2
+        }
+        let calCircleArea = (r) => {
+            return Math.PI * r ** 2;
+        }
+        let r = 5;
+        alert(`The circle area with radius of ${r} is ${calcCirclaArea(r).toFixed(2)});
+    </script>
+</body>
+</html>
