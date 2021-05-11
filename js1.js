@@ -42,4 +42,3 @@ document.write(employee1.id + "<br>");
 document.write(employee1.name + "<br>"); 
 document.write(employee1.salary + "<br>"); 
 // เขียนฟังก์ชั่น
-00+22
